@@ -35,8 +35,8 @@
         function nacionalidade(){
             var p = document.querySelector('input#nac')
             var res = document.querySelector('div#res')
-            var pais = String(p.value)
-            var pais = pais.trim()
+            var pais = String(p.value).trim()
+            
 
             res.innerHTML = `<p>O país que você nasceu foi ${pais}.</p>`
 
