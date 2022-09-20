@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body{
+            background: rgb(144, 144, 216);
+            font-family: Fira Code;
+            color: lightgray;
+        }
+        #botao, #campo {
+            background: rgb(44, 202, 241);
+            border: none;
+            font-weight: bold;
+            color: aliceblue;
+            padding: 10px;
+            border-radius: 5%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Nacionalidade</h1>
+
+    <label for="pais">Em que país você nasceu?</label>
+    <input type="text" name="nac" id="nac" itemid="campo">
+    <input type="button" value="Descobrir" onclick="nacionalidade()" id="botao">
+
+    <div id="res"></div>
+
+    <script>
+
+        function nacionalidade(){
+            var p = document.querySelector('input#nac')
+            var res = document.querySelector('div#res')
+            var pais = String(p.value)
+
+            res.innerHTML = `<p>O país que você nasceu foi ${pais}.</p>`
+
+            if (pais == 'Brasil') {
+                res.innerHTML += `<p>Então você é brasileiro! Brasilsilsil...</p>`
+            } else {
+                res.innerHTML += `<p>Então você é estrangeiro. Vai perder a Copa.</p>`
+            }
+        }
+
+    </script>
+
+</body>
+</html>
