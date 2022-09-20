@@ -36,6 +36,7 @@
             var p = document.querySelector('input#nac')
             var res = document.querySelector('div#res')
             var pais = String(p.value)
+            var pais = pais.trim()
 
             res.innerHTML = `<p>O país que você nasceu foi ${pais}.</p>`
 
